@@ -1,0 +1,123 @@
+/* Custom font for all text on the page*/
+* {
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
+/* CSS variables */
+:root {
+  --primary-color: #e9781bb4;
+  --secondary-color: #6c757d;
+  --font-size: 16px;
+  --container-width: 800px;
+  --container-height: 400px;
+  --container-padding: 20px;
+  --table-border-color: #ccc;
+}
+
+/* Box model */
+body {
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading with a different color, font size, and alignment. */
+h1 {
+  color: #8f7516e2;
+  font-size: 28px;
+  text-align: center;
+}
+
+.container {
+  background-color: #ffffff;
+  width: var(--container-width);
+  height: var(--container-height);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+/* ::before pseudo-element */
+.container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  background-color: #ebebeb;
+  border: 1px solid var(--table-border-color);
+  padding: 10px;
+  margin: 5px;
+}
+
+ul::before {
+  content: "Types of Coffee Drinks";
+  display: block;
+  font-size: 18px;
+  text-align: left;
+  color: var(--secondary-color);
+  padding: auto;
+}
+
+/* Margins, paddings, and borders */
+ul {
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+  border-left: 1px solid var(--primary-color);
+}
+
+/* Additional styling from Part 2 */
+ul li:first-child {
+  font-weight: bold;
+}
+
+img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* ::after pseudo-element */
+img::after {
+  content: "Types of Coffee Drinks";
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+td:first-child {
+  background-color: #53612ba6;
+  color: #ffffff;
+}
+
+td:last-child {
+  background-color: #58662bb6;
+  color: #fff;
+}
+
+th {
+  background-color: #a4d46a;
+  color: #fff;
+  padding: 10px;
+}
+/* Pseudo-classes */
+table td:hover {
+  background-color: greenyellow;
+}
+
+table tr:hover {
+  background-color: greenyellow;
+}
